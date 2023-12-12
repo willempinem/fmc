@@ -1,0 +1,1005 @@
+{
+	"info": {
+		"_postman_id": "ea937d9b-a8c6-4b3d-95f0-97c13a7ee0c5",
+		"name": "DSC-FMC-Squad3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31610976",
+		"_collection_link": "https://galactic-escape-637942-1.postman.co/workspace/New-Team-Workspace~6e252344-fcc1-42ad-ae3a-2497a5cd2e0a/collection/25613455-ea937d9b-a8c6-4b3d-95f0-97c13a7ee0c5?action=share&source=collection_link&creator=31610976"
+	},
+	"item": [
+		{
+			"name": "suspend-order",
+			"item": [
+				{
+					"name": "SuspendOrder:findByDTO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ordering/v1/suspend-order/worklist/10000?limit=20&offset=0&orderId=1&startdate=2002-10-10&enddate=2022-02-10&status=Draft&agentId=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ordering",
+								"v1",
+								"suspend-order",
+								"worklist",
+								"10000"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "orderId",
+									"value": "1"
+								},
+								{
+									"key": "startdate",
+									"value": "2002-10-10"
+								},
+								{
+									"key": "enddate",
+									"value": "2022-02-10"
+								},
+								{
+									"key": "status",
+									"value": "Draft"
+								},
+								{
+									"key": "agentId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SuspendOrder:findByDTO Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ordering/v1/suspend-order/worklist/10000?limit=20&offset=0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ordering",
+								"v1",
+								"suspend-order",
+								"worklist",
+								"10000"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SuspendOrder:findOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ordering/v1/suspend-order/worklist/10000/b75298e7-4cfd-49cd-8c3c-7b44cfd297d1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ordering",
+								"v1",
+								"suspend-order",
+								"worklist",
+								"10000",
+								"b75298e7-4cfd-49cd-8c3c-7b44cfd297d1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SuspendOrder:getPredictiveBill",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ordering/v1/suspend-order/predictive-bill/10000?suspend_start_date=2023-12-11",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ordering",
+								"v1",
+								"suspend-order",
+								"predictive-bill",
+								"10000"
+							],
+							"query": [
+								{
+									"key": "suspend_start_date",
+									"value": "2023-12-11"
+								},
+								{
+									"key": "suspend_end_date",
+									"value": "2023-1-29",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SuspendOrder:suspendStatus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ordering/v1/suspend-order/suspend-status/customer/10000",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ordering",
+								"v1",
+								"suspend-order",
+								"suspend-status",
+								"customer",
+								"10000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SuspendOrder:createWorklist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"indihomeNumber\": \"10000\",\n    \"agentId\": \"20000\",\n    \"customerName\": \"Dennys\",\n    \"nik\": \"357831708940002\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ordering/v1/suspend-order/worklist",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ordering",
+								"v1",
+								"suspend-order",
+								"worklist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SuspendOrder:submitWorklist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"start_date\": \"2023-12-30 01:00:00\",\n    \"end_date\": \"2023-11-30 00:00:00\",\n    \"suspend_period\": 1,\n    \"suspend_reason\": \"Test\",\n    \"agent_id\": \"12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ordering/v1/suspend-order/submit/10001/5d391913-8c24-4274-9f10-74e26832af1d",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ordering",
+								"v1",
+								"suspend-order",
+								"submit",
+								"10001",
+								"5d391913-8c24-4274-9f10-74e26832af1d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SuspendOrder:updateWorklistCustomerValidation - DIRECT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"applicantType\": \"DIRECT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ordering/v1/suspend-order/worklist/62777935-896d-4770-a1b8-425c3e91d389/customer-validation",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ordering",
+								"v1",
+								"suspend-order",
+								"worklist",
+								"62777935-896d-4770-a1b8-425c3e91d389",
+								"customer-validation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SuspendOrder:updateWorklistCustomerValidation - REPRESENTED",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"applicantType\": \"REPRESENTED\",\n    \"applicantName\": \"Julieca\",\n    \"identityNumber\": \"357831107950002\",\n    \"email\": \"julieca@something.com\",\n    \"phoneNumber\": \"08123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ordering/v1/suspend-order/worklist/b75298e7-4cfd-49cd-8c3c-7b44cfd297d1/customer-validation",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ordering",
+								"v1",
+								"suspend-order",
+								"worklist",
+								"b75298e7-4cfd-49cd-8c3c-7b44cfd297d1",
+								"customer-validation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SuspendOrder:updateWorklistTermAndCondition",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"applicantType\": \"DIRECT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ordering/v1/suspend-order/worklist/b75298e7-4cfd-49cd-8c3c-7b44cfd297d1/term-and-condition",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ordering",
+								"v1",
+								"suspend-order",
+								"worklist",
+								"b75298e7-4cfd-49cd-8c3c-7b44cfd297d1",
+								"term-and-condition"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SuspendOrder:updateWorklistPeriodChoosing",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"startDate\": \"2024-01-01\",\n    \"endDate\": \"2024-12-01\",\n    \"suspendDuration\": 30,\n    \"reason\": \"this is personal\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ordering/v1/suspend-order/worklist/b75298e7-4cfd-49cd-8c3c-7b44cfd297d1/period-choosing",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ordering",
+								"v1",
+								"suspend-order",
+								"worklist",
+								"b75298e7-4cfd-49cd-8c3c-7b44cfd297d1",
+								"period-choosing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"indihomeNumber\": \"10000\",\r\n    \"agentId\": \"20000\",\r\n    \"customerName\": \"Dennys\",\r\n    \"nik\": \"357831708940002\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ordering/v1/suspend-order",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ordering",
+								"v1",
+								"suspend-order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "deactivation-order",
+			"item": [
+				{
+					"name": "SuspendOrder:createWorklist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"indihomeNumber\": \"10000\",\n    \"agentId\": \"20000\",\n    \"customerName\": \"Dennys\",\n    \"nik\": \"357831708940002\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ordering/v1/deactivation-order/worklist",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ordering",
+								"v1",
+								"deactivation-order",
+								"worklist"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "resume-order",
+			"item": [
+				{
+					"name": "ResumeOrder:createWorklist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"indihomeNumber\": \"10000\",\n    \"agentId\": \"20000\",\n    \"customerName\": \"Dennys\",\n    \"nik\": \"357831708940002\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3004/fmc-api/ordering/v1/resume-order/worklist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3004",
+							"path": [
+								"fmc-api",
+								"ordering",
+								"v1",
+								"resume-order",
+								"worklist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ResumeOrder:submitWorklist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3004/fmc-api/ordering/v1/resume-order/submit/9ef32476-d0e6-4b12-abd5-2d035295eeb5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3004",
+							"path": [
+								"fmc-api",
+								"ordering",
+								"v1",
+								"resume-order",
+								"submit",
+								"9ef32476-d0e6-4b12-abd5-2d035295eeb5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ResumeOrder:findByDTO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3004/fmc-api/ordering/v1/resume-order/worklist/10000?limit=20&offset=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3004",
+							"path": [
+								"fmc-api",
+								"ordering",
+								"v1",
+								"resume-order",
+								"worklist",
+								"10000"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ResumeOrder:findOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3004/fmc-api/ordering/v1/resume-order/worklist/10000/40844603-83a5-4be2-83e5-69a67fdc6101",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3004",
+							"path": [
+								"fmc-api",
+								"ordering",
+								"v1",
+								"resume-order",
+								"worklist",
+								"10000",
+								"40844603-83a5-4be2-83e5-69a67fdc6101"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ResumeOrder:updateWorklistCustomerValidation - DIRECT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"applicantType\": \"DIRECT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3004/fmc-api/ordering/v1/resume-order/worklist/b75298e7-4cfd-49cd-8c3c-7b44cfd297d1/customer-validation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3004",
+							"path": [
+								"fmc-api",
+								"ordering",
+								"v1",
+								"resume-order",
+								"worklist",
+								"b75298e7-4cfd-49cd-8c3c-7b44cfd297d1",
+								"customer-validation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ResumeOrder:updateWorklistCustomerValidation - REPRESENTED",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"applicantType\": \"REPRESENTED\",\n    \"applicantName\": \"Julieca\",\n    \"identityNumber\": \"357831107950002\",\n    \"email\": \"julieca@something.com\",\n    \"phoneNumber\": \"08123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3004/fmc-api/ordering/v1/resume-order/worklist/2634a2cf-4349-49ce-925d-14862bf0ae7e/customer-validation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3004",
+							"path": [
+								"fmc-api",
+								"ordering",
+								"v1",
+								"resume-order",
+								"worklist",
+								"2634a2cf-4349-49ce-925d-14862bf0ae7e",
+								"customer-validation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ResumeOrder:updateWorklistTermAndCondition",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"applicantType\": \"datang sendiri\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.191.1:8080/fmc-api/ordering/v1/resume-order/worklist/2634a2cf-4349-49ce-925d-14862bf0ae7e/term-and-condition",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"191",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"fmc-api",
+								"ordering",
+								"v1",
+								"resume-order",
+								"worklist",
+								"2634a2cf-4349-49ce-925d-14862bf0ae7e",
+								"term-and-condition"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "change-ownership",
+			"item": [
+				{
+					"name": "ChangeOwnership:createWorklist",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"indihomeNumber\": \"10000\",\n    \"agentId\": \"20000\",\n    \"customerName\": \"Dennys\",\n    \"nik\": \"357831708940002\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3004/fmc-api-2/change-ownership/v1/worklist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3004",
+							"path": [
+								"fmc-api-2",
+								"change-ownership",
+								"v1",
+								"worklist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeOwnership:submit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"agent_id\": \"12345\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/change-ownership/v1/submit/2d3cfb3d-229d-4bf0-b4be-e80a33a7e536",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"change-ownership",
+								"v1",
+								"submit",
+								"2d3cfb3d-229d-4bf0-b4be-e80a33a7e536"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeOwnership:findByDTO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/change-ownership/v1/worklist/10000?limit=20&offset=0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"change-ownership",
+								"v1",
+								"worklist",
+								"10000"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeOwnership:findOne",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/change-ownership/v1/worklist/10000/9a3baba1-5718-4a31-aa73-f5c10c5a408d",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"change-ownership",
+								"v1",
+								"worklist",
+								"10000",
+								"9a3baba1-5718-4a31-aa73-f5c10c5a408d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeOwnership:updateWorklistCustomerValidation - DIRECT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"applicantType\": \"DIRECT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3004/fmc-api/change-ownership/v1/worklist/9a3baba1-5718-4a31-aa73-f5c10c5a408d/customer-validation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3004",
+							"path": [
+								"fmc-api",
+								"change-ownership",
+								"v1",
+								"worklist",
+								"9a3baba1-5718-4a31-aa73-f5c10c5a408d",
+								"customer-validation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeOwnership:updateWorklistCustomerValidation - REPRESENTED",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"applicantType\": \"REPRESENTED\",\n    \"applicantName\": \"Julieca\",\n    \"identityNumber\": \"357831107950002\",\n    \"email\": \"julieca@something.com\",\n    \"phoneNumber\": \"08123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3004/fmc-api/change-ownership/v1/worklist/9a3baba1-5718-4a31-aa73-f5c10c5a408d/customer-validation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3004",
+							"path": [
+								"fmc-api",
+								"change-ownership",
+								"v1",
+								"worklist",
+								"9a3baba1-5718-4a31-aa73-f5c10c5a408d",
+								"customer-validation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeOwnership:updateWorklistTermAndCondition",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"applicantType\": \"datang sendiri\"\n}\n\n// /fmc-api-2/change-ownership/v1/syarat-ketentuan/5bcb1ec0-d23b-49cc-af9d-61a8830e7820/term-and-condition",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/change-ownership/v1/worklist/9a3baba1-5718-4a31-aa73-f5c10c5a408d/term-and-condition",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"change-ownership",
+								"v1",
+								"worklist",
+								"9a3baba1-5718-4a31-aa73-f5c10c5a408d",
+								"term-and-condition"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeOwnership:updateWorklistNewCustomerData - WNI",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerData\": {\n        \"indihomeNumber\": \"0100100111\",\n        \"customerName\": \"dennys\",\n        \"placeOfBirth\": \"medan\",\n        \"dateOfBirth\": \"2000-01-01\",\n        \"primaryContactNumber\": \"628123456789\",\n        \"secondaryContactNumber\": \"628123456788\",\n        \"email\": \"dennys@example.com\"\n    },\n    \"customerIdentity\": {\n        \"nationality\": \"WNI\",\n        \"identityNumber\": \"3578311801000002\",\n        \"fullAddress\": \"Jl. Gatot Subroto No.Kav. 52, RT.6/RW.1\",\n        \"subDistrict\": \"Kuningan Barat\",\n        \"district\": \"Mampang Prapatan\",\n        \"city\": \"Kota Jakarta Selatan\",\n        \"province\": \"DKI Jakarta\",\n        \"installationAddress\": \"Jl. Gatot Subroto No.Kav. 52, RT.6/RW.1\",\n        \"isOwnBuilding\": true\n    },\n    \"customerRelative\": {\n        \"relativeName\": \"Ady\",\n        \"contactNumber\": \"628123456777\",\n        \"relationship\": \"Uncle\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3004/fmc-api/change-ownership/v1/worklist/9a3baba1-5718-4a31-aa73-f5c10c5a408d/new-customer-data",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3004",
+							"path": [
+								"fmc-api",
+								"change-ownership",
+								"v1",
+								"worklist",
+								"9a3baba1-5718-4a31-aa73-f5c10c5a408d",
+								"new-customer-data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeOwnership:updateWorklistNewCustomerData - WNA",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"customerData\": {\n        \"indihomeNumber\": \"0100100111\",\n        \"customerName\": \"dennys\",\n        \"placeOfBirth\": \"medan\",\n        \"dateOfBirth\": \"2000-01-01\",\n        \"primaryContactNumber\": \"628123456789\",\n        \"secondaryContactNumber\": \"628123456788\",\n        \"email\": \"dennys@example.com\"\n    },\n    \"customerIdentity\": {\n        \"nationality\": \"WNA\",\n        \"passportNumber\": \"IN00006178\",\n        \"kitasNumber\": \"9876543219876542\",\n        \"fullAddress\": \"Jl. Gatot Subroto No.Kav. 52, RT.6/RW.1\",\n        \"subDistrict\": \"Kuningan Barat\",\n        \"district\": \"Mampang Prapatan\",\n        \"city\": \"Kota Jakarta Selatan\",\n        \"province\": \"DKI Jakarta\",\n        \"installationAddress\": \"Jl. Gatot Subroto No.Kav. 52, RT.6/RW.1\",\n        \"isOwnBuilding\": true\n    },\n    \"customerRelative\": {\n        \"relativeName\": \"Ady\",\n        \"contactNumber\": \"628123456777\",\n        \"relationship\": \"Uncle\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3004/fmc-api/change-ownership/v1/worklist/9a3baba1-5718-4a31-aa73-f5c10c5a408d/new-customer-data",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3004",
+							"path": [
+								"fmc-api",
+								"change-ownership",
+								"v1",
+								"worklist",
+								"9a3baba1-5718-4a31-aa73-f5c10c5a408d",
+								"new-customer-data"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ordering-getLOV",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/ordering/v1/lov",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"ordering",
+						"v1",
+						"lov"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ordering:validateCustomerStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/ordering/v1/validate-customer/10000?identity_value=test&customer_alias=test&birth_date=2023-11-20",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"ordering",
+						"v1",
+						"validate-customer",
+						"10000"
+					],
+					"query": [
+						{
+							"key": "identity_value",
+							"value": "test"
+						},
+						{
+							"key": "customer_alias",
+							"value": "test"
+						},
+						{
+							"key": "birth_date",
+							"value": "2023-11-20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ordering:syaratKetentuan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/ordering/v1/syarat-ketentuan?language=EN&order_type=suspend-order",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"ordering",
+						"v1",
+						"syarat-ketentuan"
+					],
+					"query": [
+						{
+							"key": "language",
+							"value": "EN"
+						},
+						{
+							"key": "order_type",
+							"value": "suspend-order"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
